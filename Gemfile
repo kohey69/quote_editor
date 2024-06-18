@@ -10,6 +10,7 @@ gem "stimulus-rails"
 gem "cssbundling-rails"
 gem "redis"
 gem "bootsnap", require: false
+gem "simple_form"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
