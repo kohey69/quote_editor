@@ -17,7 +17,7 @@ class QuotesController < ApplicationController
     if @quote.save
       redirect_to quote_path(@quote), notice: 'Quote was successfully created.'
     else
-      render :new
+      render :new, status: :unprocessable_content
     end
   end
 
@@ -28,7 +28,7 @@ class QuotesController < ApplicationController
     if @quote.update(quote_params)
       redirect_to quote_path(@quote), notice: 'Quote was successfully updated.'
     else
-      render :edit
+      render :edit, status: :unprocessable_content
     end
   end
 
