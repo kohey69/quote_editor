@@ -1,7 +1,8 @@
 name: Go Test
 
 on:
-  push:
+  issue_comment:
+    types: [created]
 
 jobs:
   build:
